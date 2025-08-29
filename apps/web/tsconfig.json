@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "types": ["node"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared-logic/*": ["../../packages/shared-logic/src/*"],
+      "@shared-api/*": ["../../packages/shared-api/src/*"],
+      "@shared-types/*": ["../../packages/shared-logic/src/types/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules", 
+    "dist", 
+    "../../apps/mobile/**/*",
+    "**/*.native.*",
+    "**/*.ios.*",
+    "**/*.android.*"
+  ]
+}
